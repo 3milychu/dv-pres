@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Visualization</title>
+<style>
+body, html {
+	scroll-snap-type: y mandatory;
+	margin:0;
+	top:0;
+	left:0;
+}
+.section {
+	width:100%;
+	height:100%;
+	scroll-snap-align: center;
+}
+</style>
+</head>
+<body>
+
+</body>
+<script>
+	for(i=1;i<27;i++){
+		if(i==12){
+		var link = document.createElement('a');
+		link.href = "https://50-jahre-hitparade.ch/";
+		link.target="_blank";
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		link.appendChild(item);
+		body.appendChild(link);
+		} else if (i==18){
+		var link = document.createElement('a');
+		link.href = "https://phenomenalworld.org/guaranteed-income/visualization-test";
+		link.target="_blank";
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		link.appendChild(item);
+		body.appendChild(link);
+		} else if (i==20){
+		var link = document.createElement('a');
+		link.href = "https://3milychu.github.io/csmi-data/";
+		link.target="_blank";
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		link.appendChild(item);
+		body.appendChild(link);
+		}else if (i==21) {
+		var link = document.createElement('a');
+		link.href = "https://jainfamilyinstitute.github.io/isa-app/interface";
+		link.target="_blank";
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		link.appendChild(item);
+		body.appendChild(link);
+		} else if (i==23) {
+		var link = document.createElement('a');
+		link.href = "https://fivethirtyeight.com/features/science-isnt-broken/#part1";
+		link.target="_blank";
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		link.appendChild(item);
+		body.appendChild(link);
+		} else if (i==24){
+		var link = document.createElement('a');
+		link.href = "https://3milychu.github.io/algorithmic-fairness/1.html";
+		link.target="_blank";
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		link.appendChild(item);
+		body.appendChild(link);
+		} else if (i==26){
+		var link = document.createElement('a');
+		link.href = "https://ncase.me/trust/";
+		link.target="_blank";
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		link.appendChild(item);
+		body.appendChild(link);
+		} else {
+		var item = document.createElement('img');
+		item.src= "/"+i+".png";
+		item.setAttribute("class", "section");
+		var body = document.querySelector('body');
+		body.appendChild(item);
+		}
+		
+	}
+</script>
+</html>

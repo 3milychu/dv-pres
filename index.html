@@ -26,8 +26,13 @@ body, html {
 		item.setAttribute("class", "section");
 		var iframe = document.createElement('iframe');
 		iframe.src="game.html";
-		iframe.width=1280;
-		iframe.height=720;
+		if(window.innerWidth>1900){
+			iframe.width=1920;
+			iframe.height=1080;
+		} else {
+			iframe.width=1280;
+			iframe.height=720;
+		}
 		iframe.frameborder="0";
 		iframe.style.border="0";
 		var body = document.querySelector('body');

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+<style>
+.body, html {
+	margin:4%;
+	left:0;
+	top:0;
+	font-family:'Nunito Sans', sans-serif;
+}
+header h1 {
+	color:#CCCCCC;
+	text-transform:uppercase;
+	font-size:1.3em;
+	letter-spacing:0.2em;
+	margin-left:3%;
+	margin-top:2%;
+	margin-bottom:5%;
+}
+.card {
+	border:0.10em solid #E8A231;
+	background-color:#E8A231;
+	color:white;
+	width:28%;
+	height:57vh;
+	margin:2%;
+	display:inline-block;
+	border-radius:3em;
+	margin-right:2%;
+	cursor:pointer;
+	transition: 0.25s all ease-in-out;
+}
+.card h2 {
+	font-family:'Nunito', sans-serif;
+	font-weight:600;
+	position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:auto;
+    vertical-align:middle;
+    text-align:left;
+    font-size:2.3em;
+    padding:15%;
+}
+</style>
+</head>
+<body>
+<header>
+	<h1>What is this quotidient data vis?</h1>
+</header>
+
+<game>
+	<div class="card" id="one">
+		<h2>Classic invented by William Playfair</h2>
+	</div>
+	<div class="card" id="two">
+		<h2>The modern genie</h2>
+	</div>
+	<div class="card" id="three">
+		<h2>Eats up all the phone storage</h2>
+	</div>
+</game>
+
+<script>
+var one = document.querySelector('#one');
+var two = document.querySelector('#two');
+var three = document.querySelector('#three');
+
+var toggle = function (a, b) {
+    var togg = false;
+    return function () {
+        // passes return value back to caller
+        return (togg = !togg) ? a() : b();
+    };
+};
+// one toggle
+one.addEventListener('click', toggle(function () {
+    one.style.backgroundColor="white";
+	one.style.border="0.10em solid #E8A231";
+	text = one.querySelector('h2');
+	text.style.color="#E8A231";
+	text.innerHTML="The bar chart";
+}, function () { 
+	one.style.backgroundColor="#E8A231";
+	one.style.border="0.10em solid #E8A231";
+	text = one.querySelector('h2');
+	text.style.color="white";
+	text.innerHTML="Classic invented by William Playfair";
+}));
+
+// two toggle
+two.addEventListener('click', toggle(function () {
+    two.style.backgroundColor="white";
+	two.style.border="0.10em solid #E8A231";
+	text = two.querySelector('h2');
+	text.style.color="#E8A231";
+	text.innerHTML="Google Search";
+}, function () { 
+	two.style.backgroundColor="#E8A231";
+	two.style.border="0.10em solid #E8A231";
+	text = two.querySelector('h2');
+	text.style.color="white";
+	text.innerHTML="The modern genie";
+}));
+
+// three toggle
+three.addEventListener('click', toggle(function () {
+    three.style.backgroundColor="white";
+	three.style.border="0.10em solid #E8A231";
+	text = three.querySelector('h2');
+	text.style.color="#E8A231";
+	text.innerHTML="Photo & video library";
+}, function () { 
+	three.style.backgroundColor="#E8A231";
+	three.style.border="0.10em solid #E8A231";
+	text = three.querySelector('h2');
+	text.style.color="white";
+	text.innerHTML="Eats up all my phone storage";
+}));
+
+</script>
+</body>
+</html>
